@@ -1,8 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import About from "../pages/About";
+
 import Home from "../pages/Home";
 import Main from "../layout/Main";
-import NotFound from "../components/NotFound";
+import NotFound from "../shared/NotFound";
+import BlogPage from "../pages/BlogPage";
+import DashBoard from "../pages/DashBoard";
+import AddPost from "../pages/AddPost";
+import EditPost from "../pages/EditPost";
 
 const router = createBrowserRouter([
   {
@@ -14,8 +18,20 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/about",
-        element: <About></About>,
+        path: "/post",
+        element: <BlogPage />,
+      },
+      {
+        path: "/dashboard",
+        element: <DashBoard />,
+      },
+      {
+        path: "/addPost",
+        element: <AddPost />,
+      },
+      {
+        path: "/editPost",
+        element: <EditPost />,
       },
       {
         path: "*",

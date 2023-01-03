@@ -1,5 +1,6 @@
 import React from "react";
-import banner from "../assets/img/banner.jpeg";
+import banner from "../../assets/img/banner.jpeg";
+import Typical from "react-typical";
 
 const Banner = () => {
   return (
@@ -14,7 +15,14 @@ const Banner = () => {
             />
           </div>
           <div class="lg:px-1 xl:px-16">
-            <span>food blogger</span>
+            <span className="text-[#5869DA]">
+              <span className="text-black">I'm </span>
+              <Typical
+                steps={["Food Blogger !", 2500, "Travel Blogger !", 2500]}
+                loop={Infinity}
+                wrapper="b"
+              />
+            </span>
             <h2 class="text-6xl font-semibold">
               Hello, I'm <span class="text-[#5869da]">Steven</span>
             </h2>

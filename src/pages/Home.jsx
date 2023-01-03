@@ -1,9 +1,9 @@
 import React from "react";
-import AllBlogs from "../components/AllBlogs";
-import AllReadingContent from "../components/AllReadingContent";
+import AllBlogs from "../components/home/AllBlogs";
+import AllReadingContent from "../components/home/AllReadingContent";
+import Banner from "../components/home/Banner";
 
-import Banner from "../components/Banner";
-import Owner from "../components/Owner";
+import Owner from "../components/home/Owner";
 
 const Home = () => {
   return (
