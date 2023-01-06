@@ -1,7 +1,7 @@
 import React from "react";
 import AllReadyRead from "./AllReadyRead";
 
-const AllReadingContent = () => {
+const ReadingHistory = () => {
   return (
     <div class="all-content pt-5">
       <h2 class="p-4">All reading content</h2>
@@ -19,4 +19,4 @@ const AllReadingContent = () => {
   );
 };
 
-export default AllReadingContent;
+export default ReadingHistory;

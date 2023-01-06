@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "./Blog";
+import BlogCard from "./BlogCard";
 import Pagination from "./Pagination";
 
 const AllBlogs = () => {
@@ -14,12 +14,12 @@ const AllBlogs = () => {
       </div>
 
       <div class="all-card grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <Blog />
-        <Blog />
-        <Blog />
-        <Blog />
-        <Blog />
-        <Blog />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
+        <BlogCard />
       </div>
       <Pagination />
     </>

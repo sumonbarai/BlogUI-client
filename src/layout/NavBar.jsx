@@ -94,13 +94,13 @@ const NavBar = () => {
             </ul>
           </div>
           <div class="navbar-end">
-            <div class="bg-red-500 m-1 w-7 h-7 rounded-full flex text-white bg-[#3b5999] cursor-pointer">
+            <div class="m-1 w-7 h-7 rounded-full flex text-white bg-[#3b5999] cursor-pointer">
               <i class="fa-brands fa-facebook-f m-auto"></i>
             </div>
-            <div class="bg-red-500 m-1 w-7 h-7 rounded-full flex text-white bg-[#55acee] cursor-pointer">
+            <div class="m-1 w-7 h-7 rounded-full flex text-white bg-[#55acee] cursor-pointer">
               <i class="fa-brands fa-twitter m-auto"></i>
             </div>
-            <div class="bg-red-500 m-1 w-7 h-7 rounded-full flex text-white bg-[#bd081c] cursor-pointer">
+            <div class="m-1 w-7 h-7 rounded-full flex text-white bg-[#bd081c] cursor-pointer">
               <i class="fa-brands fa-youtube m-auto"></i>
             </div>
           </div>

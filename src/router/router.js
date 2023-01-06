@@ -3,10 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Main from "../layout/Main";
 import NotFound from "../shared/NotFound";
-import BlogPage from "../pages/BlogPage";
+import Blog from "../pages/Blog";
 import DashBoard from "../pages/DashBoard";
-import AddPost from "../pages/AddPost";
-import EditPost from "../pages/EditPost";
+import AddBlog from "../pages/AddBlog";
+import EditBlog from "../pages/EditBlog";
 
 const router = createBrowserRouter([
   {
@@ -18,20 +18,20 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/post",
-        element: <BlogPage />,
+        path: "/blog",
+        element: <Blog />,
       },
       {
         path: "/dashboard",
         element: <DashBoard />,
       },
       {
-        path: "/addPost",
-        element: <AddPost />,
+        path: "/addBlog",
+        element: <AddBlog />,
       },
       {
-        path: "/editPost",
-        element: <EditPost />,
+        path: "/editBlog",
+        element: <EditBlog />,
       },
       {
         path: "*",

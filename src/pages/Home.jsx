@@ -1,6 +1,6 @@
 import React from "react";
 import AllBlogs from "../components/home/AllBlogs";
-import AllReadingContent from "../components/home/AllReadingContent";
+import ReadingHistory from "../components/home/ReadingHistory";
 import Banner from "../components/home/Banner";
 
 import Owner from "../components/home/Owner";
@@ -17,7 +17,7 @@ const Home = () => {
             </div>
             <div class="right-area w-full lg:w-1/4">
               <Owner />
-              <AllReadingContent />
+              <ReadingHistory />
             </div>
           </div>
         </div>

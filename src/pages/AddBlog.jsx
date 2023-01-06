@@ -2,7 +2,7 @@ import React from "react";
 import DashBoardForm from "../components/dashboard/DashBoardForm";
 import DashBoardSideBar from "../components/dashboard/DashBoardSideBar";
 
-const AddPost = () => {
+const AddBlog = () => {
   return (
     <main class="bg-[#F7F8F9]">
       <div class="container mx-auto px-3 py-3">
@@ -24,4 +24,4 @@ const AddPost = () => {
   );
 };
 
-export default AddPost;
+export default AddBlog;

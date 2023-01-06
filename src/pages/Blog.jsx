@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "../assets/img/banner.jpeg";
 
-const BlogPage = () => {
+const Blog = () => {
   return (
     <main class="bg-[#F7F8F9]">
       <div class="container mx-auto">
@@ -77,4 +77,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default Blog;

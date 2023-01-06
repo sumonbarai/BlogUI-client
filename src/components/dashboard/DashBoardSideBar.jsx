@@ -11,10 +11,10 @@ const DashBoardSideBar = () => {
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/addPost">AddPost</Link>
+          <Link to="/addBlog">AddBlog</Link>
         </li>
         <li>
-          <Link to="/editPost">EditPost</Link>
+          <Link to="/editBlog">EditBlog</Link>
         </li>
       </ul>
     </div>
