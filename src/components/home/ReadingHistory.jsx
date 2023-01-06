@@ -3,10 +3,10 @@ import AllReadyRead from "./AllReadyRead";
 
 const ReadingHistory = () => {
   return (
-    <div class="all-content pt-5">
-      <h2 class="p-4">All reading content</h2>
+    <div className="all-content pt-5">
+      <h2 className="p-4">All reading content</h2>
       <hr />
-      <div class="max-h-[500px] overflow-auto">
+      <div className="max-h-[500px] overflow-auto">
         <AllReadyRead />
         <AllReadyRead />
         <AllReadyRead />
