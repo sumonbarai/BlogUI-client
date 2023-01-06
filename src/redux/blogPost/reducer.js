@@ -1,4 +1,5 @@
 import {
+  ADD_READING,
   GET_BLOG_FAILED,
   GET_BLOG_REQUEST,
   GET_BLOG_SUCCESS,
@@ -19,7 +20,7 @@ const reducer = (state = initialState, action) => {
         isLoading: true,
         error: "",
         blogs: [],
-        isReading: [],
+        isReading: [...state.isReading],
       };
     case GET_BLOG_SUCCESS:
       return {
@@ -27,7 +28,7 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         error: "",
         blogs: [...action.payload],
-        isReading: [],
+        isReading: [...state.isReading],
       };
     case GET_BLOG_FAILED:
       return {
@@ -35,7 +36,22 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         error: action.payload,
         blogs: [],
-        isReading: [],
+        isReading: [...state.isReading],
+      };
+    case ADD_READING:
+      const isExits = state.isReading.find((f) => f._id === action.payload._id);
+      if (isExits) {
+        const remaining = state.isReading.filter(
+          (f) => f._id !== action.payload._id
+        );
+        return {
+          ...state,
+          isReading: [isExits, ...remaining],
+        };
+      }
+      return {
+        ...state,
+        isReading: [action.payload, ...state.isReading],
       };
 
     default:

@@ -8,9 +8,11 @@ const AllBlogs = () => {
   // what content render
   let content;
   if (isLoading) {
-    content = <p>No content available</p>;
+    content = <p className="text-center font-bold"></p>;
   } else if (!isLoading && error) {
     content = <p>there some error in server</p>;
+  } else if (!isLoading && !error && blogs.length <= 0) {
+    content = <p>No Content available</p>;
   } else if (!isLoading && !error && blogs.length > 0) {
     content = blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />);
   }

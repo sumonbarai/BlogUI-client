@@ -1,4 +1,5 @@
 import {
+  ADD_READING,
   GET_BLOG_FAILED,
   GET_BLOG_REQUEST,
   GET_BLOG_SUCCESS,
@@ -21,5 +22,11 @@ export const getBlogFailedAction = (error) => {
   return {
     type: GET_BLOG_FAILED,
     payload: error,
+  };
+};
+export const addReadingAction = (data) => {
+  return {
+    type: ADD_READING,
+    payload: data,
   };
 };
