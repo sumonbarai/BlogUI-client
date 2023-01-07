@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import img from "../assets/img/banner.jpeg";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
+import dayCalculator from "../utilites/dayCalculator";
 
 const Blog = () => {
   const [data, setData] = useState([]);
-
+  const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
     fetch(`http://localhost:5000/blog/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);
-  const {
-    author,
-    category,
-    description,
-    duration,
-    image,
-    uploadDate,
-    views,
-    _id,
-  } = data[0] || {};
+  const { author, title, timestamp, category, description, duration, image } =
+    data[0] || {};
   return (
     <main className="bg-[#F7F8F9]">
       <div className="container mx-auto">
-        <h2 className="text-5xl p-6 max-w-5xl text-center mx-auto">
-          The effect of livestock on the physiological condition of roe deer is
-          modulated by habitat quality
+        <h2 className="text-5xl p-6 max-w-5xl text-center uppercase mx-auto">
+          {title}
         </h2>
 
         <div className="flex justify-between items-center py-12 px-2 sm:px-8 lg:px-52">
@@ -43,7 +35,9 @@ const Blog = () => {
                 <span className="">{author}</span>
               </Link>
               <ul className="list-disc list-inside flex">
-                <li className="text-slate-400 px-1">{uploadDate}</li>
+                <li className="text-slate-400 px-1">
+                  {dayCalculator(timestamp)}
+                </li>
                 <li className="text-slate-400 px-1">{duration}mins read</li>
               </ul>
             </div>
@@ -60,6 +54,11 @@ const Blog = () => {
         </div>
 
         <p className="text-justify text-lg p-8">{description}</p>
+      </div>
+      <div className="text-center pb-3">
+        <button className="btn btn-sm" onClick={() => navigate(-1)}>
+          go to home page
+        </button>
       </div>
     </main>
   );

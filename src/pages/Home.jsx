@@ -6,6 +6,7 @@ import Banner from "../components/home/Banner";
 import Owner from "../components/home/Owner";
 import { useDispatch, useSelector } from "react-redux";
 import getBlogThunk from "../redux/blogPost/thunk/getBlogThunk";
+import Loading from "../shared/loading/Loading";
 
 const Home = () => {
   const { isLoading } = useSelector((state) => state.blogPost);
@@ -21,11 +22,7 @@ const Home = () => {
         <div className="all-layout py-8 bg-[#F7F8F9]">
           <div className="container mx-auto px-3 flex gap-4 flex-col lg:flex-row">
             <div className="left-area w-full lg:w-3/4">
-              {isLoading ? (
-                <p className="text-center font-bold">...Loading</p>
-              ) : (
-                <AllBlogs />
-              )}
+              {isLoading ? <Loading /> : <AllBlogs />}
             </div>
             <div className="right-area w-full lg:w-1/4">
               <Owner />

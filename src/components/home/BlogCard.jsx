@@ -2,14 +2,23 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addReadingAction } from "../../redux/blogPost/actions";
+import dayCalculator from "../../utilites/dayCalculator";
 
 const BlogCard = ({ blog }) => {
   const { isReading } = useSelector((state) => state.blogPost);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { category, description, duration, image, uploadDate, views, _id } =
-    blog;
+  const {
+    title,
+    timestamp,
+    category,
+    description,
+    duration,
+    image,
+    views,
+    _id,
+  } = blog;
   const handleClick = () => {
     navigate(`/blog/${_id}`);
     dispatch(addReadingAction(blog));
@@ -28,10 +37,10 @@ const BlogCard = ({ blog }) => {
           </div>
         </div>
         <div onClick={handleClick} className="cursor-pointer">
-          <h2 className="card-title">Foolproof Spatchcock Turkey</h2>
-          <p>{description.slice(0, 150)}</p>
+          <h2 className="card-title capitalize">{title}</h2>
+          <p>{description.slice(0, 100)}...</p>
           <div className="text-slate-400">
-            <span>{uploadDate}</span>
+            <span>{dayCalculator(timestamp)}</span>
             <span className="px-1">.</span>
             <span>{duration} min read</span>
             <span className="px-1">.</span>
