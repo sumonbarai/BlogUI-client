@@ -4,7 +4,7 @@ import { AddPostAction } from "../actions";
 const addPostThunk = (data) => {
   return async (dispatch) => {
     try {
-      const request = await fetch("http://localhost:5000/blog", {
+      const request = await fetch("https://blogui-server.onrender.com/blog", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ const Blog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/blog/${id}`)
+    fetch(`https://blogui-server.onrender.com/blog/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

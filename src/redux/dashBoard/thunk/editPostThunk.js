@@ -4,13 +4,16 @@ import { editPostAction } from "../actions";
 const editPostThunk = (id, data) => {
   return async (dispatch) => {
     try {
-      const request = await fetch(`http://localhost:5000/blog?id=${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const request = await fetch(
+        `https://blogui-server.onrender.com/blog?id=${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const result = await request.json();
       if (result.acknowledged) {
         dispatch(editPostAction(id, data));

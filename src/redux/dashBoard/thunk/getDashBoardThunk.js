@@ -8,7 +8,7 @@ const getDashBoardThunk = () => {
   return async (dispatch) => {
     dispatch(getDashBoardRequestAction());
     try {
-      const request = await fetch("http://localhost:5000/blog");
+      const request = await fetch("https://blogui-server.onrender.com/blog");
       const data = await request.json();
       dispatch(getDashBoardSuccessAction(data));
     } catch (error) {
