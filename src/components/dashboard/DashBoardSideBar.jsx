@@ -13,9 +13,6 @@ const DashBoardSideBar = () => {
         <li>
           <Link to="/addBlog">AddBlog</Link>
         </li>
-        <li>
-          <Link to="/editBlog">EditBlog</Link>
-        </li>
       </ul>
     </div>
   );
