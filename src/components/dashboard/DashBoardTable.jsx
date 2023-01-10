@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import TableRow from "./TableRow";
 
 const DashBoardTable = () => {
+  const { allPost } = useSelector((state) => state.dashboard);
+
   return (
     <table className="table w-full">
       <thead>
@@ -14,12 +17,8 @@ const DashBoardTable = () => {
         </tr>
       </thead>
       <tbody>
-        <TableRow />
-        <TableRow />
-        <TableRow />
-        <TableRow />
-        <TableRow />
-        <TableRow />
+        {allPost &&
+          allPost.map((blog) => <TableRow key={blog._id} blog={blog} />)}
       </tbody>
     </table>
   );

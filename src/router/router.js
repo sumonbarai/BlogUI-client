@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Main from "../layout/Main";
-import NotFound from "../shared/NotFound";
+
 import Blog from "../pages/Blog";
 import DashBoard from "../pages/DashBoard";
 import AddBlog from "../pages/AddBlog";
 import EditBlog from "../pages/EditBlog";
+import NotFound from "../components/home/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         element: <AddBlog />,
       },
       {
-        path: "/editBlog",
+        path: "/editBlog/:id",
         element: <EditBlog />,
       },
       {

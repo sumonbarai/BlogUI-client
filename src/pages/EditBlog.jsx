@@ -1,6 +1,7 @@
 import React from "react";
-import DashBoardForm from "../components/dashboard/DashBoardForm";
+
 import DashBoardSideBar from "../components/dashboard/DashBoardSideBar";
+import EditForm from "../components/dashboard/EditForm";
 
 const EditBlog = () => {
   return (
@@ -11,11 +12,11 @@ const EditBlog = () => {
           <div className="drawer-content flex flex-row items-stretch justify-center">
             <label
               className="bg-base-100 p-2 swap swap-rotate lg:hidden"
-              for="my-drawer-2"
+              htmlFor="my-drawer-2"
             >
               <i className="fa-solid fa-house text-2xl cursor-pointer"></i>
             </label>
-            <DashBoardForm action="update" />
+            <EditForm />
           </div>
           <DashBoardSideBar />
         </div>

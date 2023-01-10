@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../../assets/img/banner.jpeg";
 import Typical from "react-typical";
+import { useDispatch } from "react-redux";
+import { InputKeywordAction } from "../../redux/filter/actions";
 
 const Banner = () => {
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
+  const handleInput = () => {
+    dispatch(InputKeywordAction(input));
+    setInput("");
+  };
+
   return (
     <div className="bg-[#F1F2F3]">
       <div className="container mx-auto hero">
@@ -27,7 +36,7 @@ const Banner = () => {
               Hello, I'm <span className="text-[#5869da]">Steven</span>
             </h2>
             <h3 className="text-5xl font-medium">Welcome to my blog</h3>
-            <h5 className="text-xl text-[#687385]">
+            <h5 className="text-xl text-[#687385] pt-3">
               Don't miss out on the latest news about Travel tips, <br />
               Hotels review, Food guide...
             </h5>
@@ -37,8 +46,10 @@ const Banner = () => {
                   type="text"
                   placeholder="Search…"
                   className="input input-bordered"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
                 />
-                <button className="btn btn-square">
+                <button className="btn btn-square" onClick={handleInput}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"

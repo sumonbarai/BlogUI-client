@@ -1,4 +1,5 @@
 import React from "react";
+import SocialIcon from "../../shared/SocialIcon";
 
 const Owner = () => {
   return (
@@ -20,15 +21,7 @@ const Owner = () => {
         <div className="flex justify-center justify-items-center">
           <strong className="py-1">Follow me : </strong>
           <div className="flex">
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#3b5999] cursor-pointer">
-              <i className="fa-brands fa-facebook-f m-auto"></i>
-            </div>
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#55acee] cursor-pointer">
-              <i className="fa-brands fa-twitter m-auto"></i>
-            </div>
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#bd081c] cursor-pointer">
-              <i className="fa-brands fa-youtube m-auto"></i>
-            </div>
+            <SocialIcon />
           </div>
         </div>
       </div>

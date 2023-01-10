@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import SocialIcon from "../shared/SocialIcon";
 
 const NavBar = () => {
   return (
@@ -94,15 +95,7 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#3b5999] cursor-pointer">
-              <i className="fa-brands fa-facebook-f m-auto"></i>
-            </div>
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#55acee] cursor-pointer">
-              <i className="fa-brands fa-twitter m-auto"></i>
-            </div>
-            <div className="m-1 w-7 h-7 rounded-full flex text-white bg-[#bd081c] cursor-pointer">
-              <i className="fa-brands fa-youtube m-auto"></i>
-            </div>
+            <SocialIcon />
           </div>
         </div>
       </div>

@@ -2,10 +2,12 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addReadingAction } from "../../redux/blogPost/actions";
+import { categoryAction } from "../../redux/filter/actions";
 import dayCalculator from "../../utilites/dayCalculator";
 
 const BlogCard = ({ blog }) => {
   const { isReading } = useSelector((state) => state.blogPost);
+  const { category: filterCategory } = useSelector((state) => state.filter);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -32,7 +34,12 @@ const BlogCard = ({ blog }) => {
       </figure>
       <div className={`card-body ${isClicked ? "text-red-400" : ""}`}>
         <div className="card-actions justify-start">
-          <div className="badge badge-outline hover:bg-[#5869DA] hover:text-white cursor-pointer">
+          <div
+            className={`badge badge-outline hover:bg-[#5869DA] hover:text-white cursor-pointer ${
+              filterCategory === category && "bg-[#5869DA] text-white"
+            }`}
+            onClick={() => dispatch(categoryAction(category))}
+          >
             {category}
           </div>
         </div>
