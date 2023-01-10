@@ -8,6 +8,8 @@ const AllBlogs = () => {
   const { isLoading, error, blogs } = useSelector((state) => state.blogPost);
   const { sort, category, input } = useSelector((state) => state.filter);
   const dispatch = useDispatch();
+  console.log(blogs);
+
   // button enable or disable
   let isShow;
   if (category || input) {
@@ -26,11 +28,11 @@ const AllBlogs = () => {
   // sorting function
   const blogSorting = (a, b) => {
     if (sort === "first_upload") {
-      return Number(a.timestamp) - Number(b.timestamp);
+      return Number(a.timeStamp) - Number(b.timeStamp);
     } else if (sort === "least_upload") {
-      return Number(b.timestamp) - Number(a.timestamp);
+      return Number(b.timeStamp) - Number(a.timeStamp);
     }
-    return Number(a.timestamp) - Number(b.timestamp);
+    return Number(a.timeStamp) - Number(b.timeStamp);
   };
 
   const sortByCategory = (blog) => {
