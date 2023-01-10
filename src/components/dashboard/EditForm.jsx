@@ -113,9 +113,13 @@ const EditForm = () => {
           value={category}
         >
           <option disabled>selected Category</option>
-          <option value="food">food</option>
-          <option value="vegetable">vegetable</option>
-          <option value="breakfast">breakfast</option>
+          <option value="chicken">chicken</option>
+          <option value="vegetables">vegetables</option>
+          <option value="snacks">snacks</option>
+          <option value="drinks">drinks</option>
+          <option value="pasta">pasta</option>
+          <option value="burger">burger</option>
+          <option value="soup">soup</option>
         </select>
         <button className="btn btn-sm">Update</button>
       </div>
